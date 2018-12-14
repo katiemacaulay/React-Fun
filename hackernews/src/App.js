@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    stories: [],
+  }
+
+  componentDidMount(){
+    fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
+      .then(response => response.json())
+      .then(response => {
+        const formattedData = response.slice(0, 30);
+        formattedData.forEach((id, index) =>{
+          fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+          .then(storyData => storyData.json())
+          .then(storyData => {
+            this.setState({stories: [...this.state.stories, storyData]})
+          })
+        })
+      })
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        
       </div>
     );
   }
