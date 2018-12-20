@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.7.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "react": "^16.6.3",
@@ -10,7 +11,7 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "nohup node proxy.js && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

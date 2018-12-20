@@ -1,31 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
+import TimerInput from './TimerInput'
+import Timer from './Timer'
+import StartButton from './StartButton'
 
 class App extends Component {
   state = {
-    facts: []
-  }
+      seconds: '00', 
+      minutes: '0',
+    }
 
-  componentDidMount(){
-    fetch('http://localhost:7979/facts')
-    .then(data => data.json())
-    .then(data => {
-      this.setState({facts: data.all})
-    })
-  }
-
-  showFact(){
-    return this.state.facts.map((item, index) => {
-      return <li key={index}> {item.text} </li>
-    })
-  }
-
-  
   render() {
     return (
-          <ul>
-            {this.showFact()}
-          </ul>
+      <div>
+        <TimerInput minutes={this.state.minutes}/>
+        <Timer minutes={this.state.minutes} seconds={this.state.seconds}/>
+        <StartButton/>
+      </div>
     );
   }
 }
