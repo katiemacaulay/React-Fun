@@ -6,9 +6,12 @@
     "@material-ui/core": "^3.7.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "randomcolor": "^0.5.3",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-sizeme": "^2.5.2",
+    "react-stack-grid": "^0.7.1"
   },
   "scripts": {
     "start": "react-scripts start",
