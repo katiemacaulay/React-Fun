@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Button from '@material-ui/core/Button';
 
 class TimerInput extends Component {
     state = {
@@ -25,9 +24,11 @@ class TimerInput extends Component {
     render() {
       return (
         <div>
-            <Button onClick={() => this.giveFact()}>Give me a cat fact right meow!</Button>
-            <div>
+            <div className="random-fact">
                 {this.state.randomFact.text}
+            </div>
+            <div className="button-box">
+                <button className="button button:hover"onClick={() => this.giveFact()}>Cat Facts Right Meow!</button>
             </div>
         </div>
       ); 
