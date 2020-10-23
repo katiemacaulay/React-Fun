@@ -1,0 +1,80 @@
+.body {
+  background-image: url(background.jpg);
+  background-color: black;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  }
+  
+  .button {
+  background-color: #6FCAD4;
+  padding: 10px;
+  width: 269px;
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: black;
+  height: 40px;
+  margin-left: 110px;
+  margin-top: 10px;
+  transition: .5s;
+  overflow: visible;
+  border-radius: 15px;
+  outline: none;
+  }
+  .button-box{
+    height: 300px;
+  }
+  
+  .button:hover {
+  background-color: #FFFFFF;
+  color: #6FCAD4;
+  }
+  
+  .random-fact {
+  color: #FFFFFF;
+  font-family: 'Raleway';
+  font-size: 18px;
+  text-shadow: 1px 1px #000000;
+  font-weight: bold;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  margin-right: 600px;
+  margin-top: 300px;
+  overflow: visible;
+  }
+  
+  .button-and-fact{
+  display: flex;
+  }
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+
